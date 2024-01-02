@@ -5,6 +5,8 @@ import About from './components/About';
 // import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Header from './components/Header';
+
 
 function App() {
   const [isAtTop, setIsAtTop] = useState(true);
@@ -34,21 +36,12 @@ function App() {
   }, []);
   return (
     <div className="App">
-    <header className="App-header">
-      <img src="/DSC01409.jpg" alt="Bosco Lam" className="App-image" />
-      <h1>Bosco Lam</h1>
-      <p>Web Developer</p>
-      {isAtTop && (
-        <div className="scroll-to-continue">
-          <button onClick={scrollToAbout} className="scroll-button">&#8595;</button>
-        </div>
-      )}
-    </header>
+    <Header scrollToAbout={scrollToAbout} />
     <div ref={aboutRef}>
-    <About onProjectsClick={scrollToProjects} />
+      <About onProjectsClick={scrollToProjects} />
     </div>
     <div ref={projectsRef}>
-    <Projects />
+      <Projects />
     </div>
     <Contact />
   </div>

@@ -3,8 +3,8 @@
 }
 
 .App-header {
-  background-color: #282c34; /* Example background color */
-  min-height: 100vh; /* Make the header take up the full viewport height */
+  background-color: #282c34; 
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,14 +13,43 @@
   color: white;
 }
 
-.App-image {
-  height: 200px; /* Adjust as needed */
-  border-radius: 50%; /* Circular image */
-  margin-bottom: 20px;
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  width: 100%; /* Take the full width of the parent */
+  height: 100%; /* Stretch to fill the container vertically */
 }
 
-/* Add styles for other components as needed */
+.header div {
+  margin-right: 20px;
+  max-width: 40%;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+}
 
+.social-links img {
+  height: 40px; /* Adjust size as needed */
+  margin: 0 10px; /* Adjust spacing as needed */
+}
+
+.App-image {
+  height: 200px; 
+  border-radius: 50%; 
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+
+.scroll-to-continue {
+  position: absolute; 
+  bottom: 0; 
+  text-align: center; 
+}
 .project-carousel {
   text-align: center;
   background-color: #fff;
@@ -303,6 +332,17 @@ max-width: 50%;
   cursor: pointer;
   border-radius: 5px;
   animation: bounce 2s infinite;
+}
+.tech-stack {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tech-logos img {
+  height: 40px; /* Adjust size as needed */
+  margin: 0 10px; /* Adjust spacing as needed */
 }
 
 

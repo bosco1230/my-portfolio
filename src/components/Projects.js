@@ -7,6 +7,14 @@ import fridgefy1 from '../projects/fridgefy/fridgefy1.png';
 import fridgefy2 from '../projects/fridgefy/fridgefy2.png';
 import fridgefy3 from '../projects/fridgefy/fridgefy3.png';
 import fridgefy4 from '../projects/fridgefy/fridgefy4.png';
+import chatApp1 from '../projects/real-time-chat-app/chatApp1.png';
+import chatApp2 from '../projects/real-time-chat-app/chatApp2.png';
+import chatApp3 from '../projects/real-time-chat-app/chatApp3.png';
+import chatApp4 from '../projects/real-time-chat-app/chatApp4.png';
+import chatApp5 from '../projects/real-time-chat-app/chatApp5.png';
+import chatApp6 from '../projects/real-time-chat-app/chatApp6.png';
+
+
 
 
 
@@ -24,6 +32,19 @@ const projects = [
     title: "Fridgefy",
     description: "It is a web app that allows you to store your recipes and ingredients that you have in a fridge. Recipes can be filtered by ingredients, cuisine, diet and intolerances.",
     imageUrl: [fridgefy1, fridgefy2,fridgefy3,fridgefy4],
+    techStack:"Next.js Styled-components React-router Redux ",
+    type:"Group Project",
+    role:"Implementing remove recipe function   Creating pop up window when users click on recipe   Mobile responsive styling",
+    learned:"Manage data through local storage   Understanding Redux   Communication and solving problems in a big group"
+  },
+  {
+    title: "Real Time Chat App",
+    description: "It is a real-time chat application provides a simple and user-friendly platform for one-on-one chat and managing user profile.",
+    imageUrl: [chatApp1, chatApp2,chatApp3,chatApp4,chatApp5,chatApp6],
+    techStack:"React.js CSS React-router WebSocket Express Node.js MongoDB Firebase",
+    type:"Group Project",
+    role:"Implementing client side password validation   Managing google login through Firebase   Managing user profile information",
+    learned:"Using MongoDB for managing data   implementing google login through firebase   Using websocket for real time update"
   },
   // ... more projects
 ];
@@ -40,11 +61,13 @@ function Projects() {
   const [isImageVisible, setIsImageVisible] = useState(true);
 
   const openModal = useCallback(() => {
+    document.body.style.overflow = 'hidden'; // Disable scrolling
     console.log('Opening modal with project:', projects[currentProjectIndex]);
     setIsModalOpen(true);
   }, [currentProjectIndex]);
-  
+
   const closeModal = useCallback(() => {
+    document.body.style.overflow = 'unset'; // Re-enable scrolling
     console.log('Closing modal');
     setIsModalOpen(false);
   }, []);
