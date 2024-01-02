@@ -2,20 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #282c34; /* Example background color */
+  min-height: 100vh; /* Make the header take up the full viewport height */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +13,299 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-image {
+  height: 200px; /* Adjust as needed */
+  border-radius: 50%; /* Circular image */
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Add styles for other components as needed */
+
+.project-carousel {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display:flex;
+  align-items: center;
+  justify-content:center ;
+}
+.project-whole{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 2);
+min-height: 100vh;
+}
+.project {
+  margin: 0 15px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-description{
+  width:80%
   }
-  to {
-    transform: rotate(360deg);
+  .project-body{
+  display:flex;
+  width:50%
+  }
+.project img,.modal-content img {
+  max-width: 80%;
+  height: auto;
+}
+.project-image {
+  opacity: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.project:hover {
+  transform: scale(1.05);
+}
+.project-image-visible {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  /* Add more styling */
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%;
+  max-height: 80vh; /* Adjust the height as needed */
+  overflow-y: auto; 
+}
+
+.close-button {
+  float: right;
+  cursor: pointer;
+}
+
+
+.view-more {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-more:hover {
+  background-color: #0056b3;
+}
+
+.modal-image {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0; /* Start with the image being transparent */
+}
+
+.modal-image-visible {
+  opacity: 1; /* Fully visible when this class is added */
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
   }
 }
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 1s infinite;
+  font-size: 36px; 
+}
+.scroll-to-continue {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.scroll-button {
+  display: inline-block;
+  margin-top: 10px;
+  border: 2px solid #fff; /* Adjust color as needed */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  animation: bounce 1s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.contact{
+  min-height: 100vh;
+}
+.contact-body{
+  padding:20px
+}
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Makes sure padding doesn't affect overall width */
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: vertical; /* Allows vertical resize only */
+}
+
+.contact-form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.thank-you-message {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  height:3rem;
+}
+
+.thank-you-gif {
+  max-height: 110%; /* Ensures the GIF's height does not exceed the message box */
+  margin-right: 10px; /* Adds some space between the GIF and the text */
+}
+.about-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px 0; 
+}
+
+.about-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px; 
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 40%;
+
+}
+.about h2 {
+  margin-bottom: 10px; 
+}
+
+.about h4 {
+  margin-top: 0;
+  margin-bottom: 8px; 
+}
+
+.about p {
+  margin-top: 0; 
+}
+.about-more{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-more p{
+max-width: 50%;
+}
+.about-image {
+  width: 150px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Space between image and text */
+  border-radius: 20%; /* Circular image */
+}
+.image-click-prompt {
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.view-projects-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  animation: bounce 2s infinite;
+}
+
+
+
+
+
