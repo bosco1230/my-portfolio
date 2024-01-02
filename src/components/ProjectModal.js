@@ -27,7 +27,7 @@ function ProjectModal({ project, onClose }) {
   if (!project) {
     return null;
   }
-
+ 
   const techStackItems = project.techStack ? project.techStack.split(" ") : [];
   const roleItems = project.role ? project.role.split("   ") : [];
   const learnItems = project.learned ? project.learned.split("   ") : [];
