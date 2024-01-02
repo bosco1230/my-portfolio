@@ -334,10 +334,12 @@ max-width: 50%;
   animation: bounce 2s infinite;
 }
 .tech-stack {
+  display:flex ;
   text-align: center;
   margin-top: 20px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .tech-logos img {
