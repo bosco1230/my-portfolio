@@ -120,15 +120,23 @@ button {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
-  width: 50%;
   max-height: 80vh; /* Adjust the height as needed */
   overflow-y: auto; 
 }
 
 .close-button {
-  float: right;
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
   cursor: pointer;
+  z-index: 1001; /* To ensure it's above modal content */
 }
+
+.modal-wrapper {
+  position: relative;
+  width: 50%;
+}
+
 
 
 .view-more {
@@ -346,6 +354,25 @@ max-width: 50%;
   height: 40px; /* Adjust size as needed */
   margin: 0 10px; /* Adjust spacing as needed */
 }
+/* Targeting the scrollbar of the modal */
+.modal-content::-webkit-scrollbar {
+  width: 5px; /* Adjust the width of the scrollbar */
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the scrollbar track */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
+
 
 
 

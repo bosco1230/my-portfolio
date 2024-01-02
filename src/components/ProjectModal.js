@@ -34,8 +34,10 @@ function ProjectModal({ project, onClose }) {
 
   return (
     <div className="modal">
-      <div className="modal-content">
+        <div className="modal-wrapper">
         <span className="close-button" onClick={onClose}>&times;</span>
+      <div className="modal-content">
+
         {project.imageUrl && project.imageUrl.length > 0 && (
           <img 
             key={currentImageIndex}
@@ -82,6 +84,7 @@ function ProjectModal({ project, onClose }) {
           </>
         )}
       </div>
+    </div>
     </div>
   );
 }
