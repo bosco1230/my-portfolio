@@ -9,7 +9,6 @@ import Header from './components/Header';
 
 
 function App() {
-  const [isAtTop, setIsAtTop] = useState(true);
   const aboutRef = useRef(null); 
   const projectsRef = useRef(null);
   const scrollToProjects = () => {
