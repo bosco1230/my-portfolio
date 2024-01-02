@@ -1,6 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Header = ({ scrollToAbout }) => {
+    const [showScrollButton, setShowScrollButton] = useState(true);
+
+  const handleScroll = () => {
+    // Assuming the header height is around 500px; adjust as needed
+    const headerHeight = 90;
+    const currentScrollPosition = window.scrollY;
+    
+    if (currentScrollPosition > headerHeight) {
+      setShowScrollButton(false);
+    } else {
+      setShowScrollButton(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <header className="App-header">
       <div className='header'>
@@ -29,9 +50,11 @@ const Header = ({ scrollToAbout }) => {
         <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="MongoDB" title="MongoDB" />
               </div>
     </div>
-      <div className="scroll-to-continue">
-        <button onClick={scrollToAbout} className="scroll-button">&#8595;</button>
-      </div>
+    {showScrollButton && (
+        <div className="scroll-to-continue">
+          <button onClick={scrollToAbout} className="scroll-button">&#8595;</button>
+        </div>
+      )}
     </header>
   );
 };

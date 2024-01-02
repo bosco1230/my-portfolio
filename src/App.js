@@ -9,6 +9,7 @@ import Header from './components/Header';
 
 
 function App() {
+  // const [isAtTop, setIsAtTop] = useState(true);
   const aboutRef = useRef(null); 
   const projectsRef = useRef(null);
   const scrollToProjects = () => {
@@ -18,21 +19,21 @@ function App() {
   const scrollToAbout = () => {
     aboutRef.current.scrollIntoView({ behavior: 'smooth' });
   };
-  useEffect(() => {
-    const handleScroll = () => {
-      const atTop = window.scrollY < 50; 
-      setIsAtTop(atTop);
-    };  
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const atTop = window.scrollY < 50; 
+  //     setIsAtTop(atTop);
+  //   };  
  
 
-    handleScroll();
+  //   handleScroll();
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
   return (
     <div className="App">
     <Header scrollToAbout={scrollToAbout} />
