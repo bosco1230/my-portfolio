@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useCallback, useEffect} from 'react';
 import ProjectModal from './ProjectModal';
 import interviewScheduler1 from '../projects/interview-scheduler/screenshot1.png';
 import interviewScheduler2 from '../projects/interview-scheduler/screenshot2.png';
